@@ -1,18 +1,16 @@
 
-
-
 <template>
 <div>
   <nav class="navbar navbar-expand-lg justify-content-center">
   <ul class="navbar-nav">
     <li class="nav-item">
-      <a class="nav-link" href="#">Home</a>
+      <a class="nav-link" href="/">Home</a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Calendar</a>
+      <router-link to="/calendar" class="nav-link">Calendar</router-link>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">User</a>
+      <a class="nav-link" href="/">User</a>
     </li>
   </ul>
 </nav>

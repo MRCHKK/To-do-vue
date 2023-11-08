@@ -1,9 +1,10 @@
 <template>
   <div id="app">
-    <ToDoApp />
+   <ToDoApp />
+    <router-view :key="$route.fullPath"></router-view>
+
   </div>
 </template>
-
 
 <script>
 import ToDoApp from './components/ToDoApp.vue'
