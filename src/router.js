@@ -1,17 +1,23 @@
 import { createRouter, createWebHistory } from 'vue-router';
 import Calendar from './views/Calendar-Site.vue';
+import ToDoApp from './components/ToDoApp.vue';
 
 const routes = [
   {
-    path: '/calendar', 
+    path: '/',
+    name: 'ToDo',
+    component: ToDoApp,
+  },
+  {
+    path: '/calendar',
     name: 'Calendar',
-    component: Calendar
+    component: Calendar,
   },
 ];
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
 });
 
 export default router;
