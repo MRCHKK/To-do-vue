@@ -14,21 +14,25 @@
       </ul>
     </nav>
   </div>
-  <div class="Calendar-Site">
-    <p>Aha fajnie że nie działa</p>
+  <body>
+    <div style="cursor: pointer">
+    <span class="fa fa-user-tie-hair"></span>
   </div>
-</template>
+</body>
+  </template>
 
-<script>
-export default {
-  name: 'Calendar-Site'
-}
-</script>
 
-<style>
-.Calendar-Site {
-  @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
-
-  font-family: 'Lato', sans-serif;
-}
-</style>
+  <script>
+  export default {
+    name: 'User-Site'
+  }
+  </script>
+  
+  <style>
+  .User-Site {
+    @import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap');
+  
+    font-family: 'Lato', sans-serif;
+  }
+  </style>
+  
