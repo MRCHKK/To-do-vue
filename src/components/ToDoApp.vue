@@ -1,6 +1,6 @@
 <template>
   <div>
-    <nav class="navbar navbar-expand-lg justify-content-center">
+    <nav class="navbar navbar-expand-lg justify-content-center ">
       <ul class="navbar-nav">
         <li class="nav-item">
           <a class="nav-link" href="/">Home</a>
@@ -16,7 +16,7 @@
   </div>
 
   <div class="container table-container">
-    <h2 class="text-center mt-5">Vue Todo App</h2>
+    <h2 style= "padding: 15px;" class="text-center mt-5">Vue Todo App</h2>
 
     <div class="input-container">
       <input v-model="task" type="text" placeholder="Enter task" @keydown.enter="saveInput" />
@@ -49,6 +49,10 @@
       </tbody>
     </table>
   </div>
+  
+  <div style="padding: 10px;" class="footer">
+    <p>MRCHK</p>
+  </div>
 </template>
 
 <script>
@@ -60,12 +64,14 @@ export default {
       editedTask: null,
       statuses: ['To-Do', 'In-Progress', 'Completed'],
       tasks: JSON.parse(localStorage.getItem('tasks')) || [
-        {
-        },
       ],
+      selectedDate: null,
     };
   },
   methods: {
+    handleDateSelected(date) {
+      this.selectedDate = date;
+    },
     saveToLocalStorage() {
       localStorage.setItem('tasks', JSON.stringify(this.tasks));
     },
@@ -142,4 +148,51 @@ td {
     border-bottom: 1px solid #000;
     word-wrap: break-word; 
   }
+  .navbar {
+  background-color: #333;
+  padding: 6px;
+  border-bottom: 2px solid #ddd;
+  box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.1);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 15px;
+  margin-top: auto;
+}
+
+.navbar a:hover {
+  color: #ffd700;
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.content {
+  margin-top: 20px;
+}
+body {
+  background-color: #f0f0f0;
+  font-family: Arial, sans-serif;
+}
+#app {
+  text-align: center;
+  padding: 20px;
+}
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  color: rgb(255, 255, 255);
+  text-align: left;
+  padding: 3px;
+  box-shadow: 0px 8px 6px rgba(0, 0, 0, 0.1);
+  background-color: #333;
+}
 </style>

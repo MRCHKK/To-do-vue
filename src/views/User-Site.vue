@@ -9,7 +9,7 @@
           <router-link to="/calendar" class="nav-link">Calendar</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/user" class="nav-link">User </router-link>
+          <router-link to="/user" class="nav-link">User</router-link>
         </li>
       </ul>
     </nav>
